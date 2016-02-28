@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>一叶书签</title>
+
+<!-- Site CSS -->
+<link href="./css/yiye.css" rel="stylesheet">
+<script src="./js/lib/jquery.js"></script>
+<script src="./js/lib/three.js"></script>
+<script src="./js/main.js"></script>
+<body>
+<div id="yiye">
+	<div id="connect-close">
+		<img src="./images/icon-close.png" />
+	</div>
+	<div class="spinner">
+      <div class="bounce1"></div>
+      <div class="bounce2"></div>
+      <div class="bounce3"></div>
+    </div>
+</div>
+<script type="text/html" id="yiye-login">
+	<div id="yiye-login-wrapper">
+		<div id="main-close">
+				<img src="./images/icon-close.png" />
+		</div>
+		<div id="login-logo-wrapper">
+			<img src="./images/logo.png"/>
+			<h1>发现网络之美</h1>
+		</div>
+		<form id="login-form">
+			<div class="form-field">
+				<input type="text" placeholder="邮箱" class="form-control" name="email"/>
+				<span class=""></span>
+			</div>
+			<div class="form-field">
+				<input type="password" placeholder="密码" class="form-control" name="password"/>
+				<span class=""></span>
+			</div>
+			<p class="danger-info" id="login-errorInfo"></p>
+			<input type='button' value="登陆"  class="btn" id="login-submit" />
+			<p id="login-others"><a href="http://127.0.0.1:3000/forgot">忘记密码?</a><a href="http://127.0.0.1:3000/signup" class="right">立即注册</a></p>
+		</form>
+	</div>
+</script>
+<script type="text/html" id="yiye-main" />
+<div id="yiye-main-wrapper">
+	<header id="main-header">
+		<div id="main-user">
+			<a href="#" id="main-user-url"  target="_blank"><img src="#" id="main-user-img"/></a>
+		</div>
+		<h1>一叶书签</h1>
+		<div id="main-close">
+			<img src="./images/icon-close.png" />
+		</div>
+	</header>
+	<div id="main-bookmarks">
+		<div id="main-slider">
+			<div class="cell arrow">
+				<a class="icon left"></a>
+			</div>
+			<div id="main-slide-picture" class="cell">
+				<img src="" id="main-img-content"/>
+				<div id="main-img-screenShot"></div>
+			</div>
+			<div class="cell arrow">
+				<a class="icon right"></a>
+			</div>
+		</div>
+		<div id="main-form">
+			<div id="main-form-title">
+				<h6>标题</h6>
+				<div id="main-title-content" contenteditable="true" class="textarea-edit"></div>
+			</div>
+			<div id="main-form-description" >
+				<h6>描述</h6>
+				<div id="main-description-content" contenteditable="true" class="textarea-edit"></div>
+			</div>
+			<div id="main-form-tags">
+				<h6>标签</h6>
+				<input type="text" placeholder="标签(多个标签请用逗号隔开)">
+			</div>
+		</div>
+	</div>
+	<div id="main-form-submit">
+		<button class="btn" >提交至 ></button>
+	</div>
+	<p class="danger-info" id="bookmark-errorInfo"></p>
+</div>
+</script>
+<script type="text/html" id="yiye-post" />
+<div id="yiye-post-wrapper">
+	<header id="post-header">
+		<div id="post-back">
+			<img src="./images/icon-back.png" />
+		</div>
+		<h1>提交至</h1>
+		<div id="post-ok">
+			<input type="button" value="提交" id="post-ok-button" class="btn"/>
+		</div>
+		<div id="post-channel-selected">
+			 选择需要提交的频道(可选择1-5个)
+		</div>
+		<div id="post-search-wrapper">
+			<input type="text" id="post-search" placeholder="查询需要提交的频道"/>
+		</div>
+	</header>
+	<div id="post-channel">
+			<ul id="post-channel-list">
+				暂无频道
+			</ul>
+			<ul id="search-channel-list">
+				暂无频道
+			</ul>
+	</div>
+</div>
+</script>
+<script type="text/html" id="yiye-success" />
+<div id="yiye-success-wrapper">
+ 	<header id="success-header">
+		<div id="success-user">
+			<a href="#" id="success-user-url"  target="_blank"><img src="#" id="success-user-img"/></a>
+		</div>
+		<h1>一叶书签</h1>
+		<div id="success-close">
+			<img src="./images/icon-close.png" />
+		</div>
+	</header>
+	<div id="success-submit-info">
+		<div id="success-animation" class="outer">
+			<div class="mask left">
+				<div class="fill"></div>
+			</div>
+			<div class="mask right">
+				<div class="fill"></div>
+			</div>
+			<div class="inner">
+				<img src="./images/hook.png"/>
+			</div>
+		</div>
+	</div>
+	<p id="post-success-title">提交完成</p>
+	<ul id="success-channel-list">
+	</ul>
+	<div id="success-button-wrapper">
+		<a href="http://127.0.0.1:3000/home" target="_blank"><button class="btn" id="success-goto">访问网站</button></a>
+		<button class="btn" id="success-button-close">关闭</button>
+	</div>
+</div>
+</script>
+</body>
+</html>

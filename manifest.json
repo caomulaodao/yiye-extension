@@ -1,0 +1,28 @@
+{
+   "background": {
+      "persistent": false,
+      "scripts": [ "chrome/eventPage.js" ]
+   },
+   "browser_action": {
+      "default_icon": "images/yiye_logo_18.png",
+      "default_title": "一叶书签"
+   },
+   "content_scripts": [ {
+      "js": ["chrome/jquery.js","chrome/yiye.js","chrome/inject.js"],
+      "matches": [ "http://*/*", "https://*/*" ]
+   } ],
+   "description": "一叶书签/发现网络之美",
+   "homepage_url": "http://yiye.me",
+   "icons": {
+      "128": "images/yiye_logo_128.png",
+      "16": "images/yiye_logo_16.png",
+      "48": "images/yiye_logo_48.png"
+   },
+   "manifest_version": 2,
+   "name": "一叶书签",
+   "permissions": [ "tabs", "*://*/*","<all_urls>"],
+   "short_name": "一叶书签",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.0.6",
+   "web_accessible_resources": [ "css/inject.css", "popup/popup.html" ]
+}
